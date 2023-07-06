@@ -15,7 +15,7 @@ library(rdist)
 
 # Pentuan Parameter fgwc
 param_fgwc <- c(kind='u',ncluster=4,m=1.5,distance='minkowski',order=2,
-                alpha=0.7,a=1,b=1,max.iter=500,error=1e-5,randomN=10)
+                alpha=0.8,a=1,b=1,max.iter=1000,error=1e-5,randomN=10)
 
 # FGWC Standart
 Res_fgwc <- fgwc(data=sovi_data_Kab_R, pop=Sovi_Pop, distmat=mat_dist, algorithm = "classic", param_fgwc,1)
@@ -23,4 +23,4 @@ Res_fgwc <- fgwc(data=sovi_data_Kab_R, pop=Sovi_Pop, distmat=mat_dist, algorithm
 # Menggabungkan hasil cluster algoritma FGWC dengan data
 library(xlsx)
 cluster.output <- cbind(data_kab ,Res_fgwc$cluster)
-write.xlsx(cluster.output, file = "Final Cluster.xlsx", row.names = TRUE)
+write.xlsx(cluster.output, file = "Final Cluster3m1-5.xlsx", row.names = TRUE)
