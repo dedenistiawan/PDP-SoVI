@@ -1,6 +1,8 @@
-# Load Data Sovi
+#tes tes tes tes
+# Load Data Sovi 
 load("D:/My Drive/deden-RMarkdown & Github/PDP-SoVI/Data/sovi_data.RData")
 
+#perubahan pada git
 # Load Data Matrix Distance
 load("D:/My Drive/deden-RMarkdown & Github/PDP-SoVI/Data/sovi_dist.Rdata")
 
