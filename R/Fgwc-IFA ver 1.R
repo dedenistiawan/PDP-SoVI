@@ -18,7 +18,7 @@ library(naspaclust)
 library(rdist)
 
 # Penentuan Parameter fgwc
-param_fgwc <- c(kind='u',ncluster=4,m=1.5,distance='minkowski',order=2,
+param_fgwc <- c(kind='v',ncluster=4,m=1.5,distance='minkowski',order=2,
                 alpha=0.7,betha=0.3,a=1,b=1,max.iter=1000,error=1e-5,randomN=10)
 
 # Parameter FPA
@@ -43,9 +43,9 @@ write.xlsx(cluster.output, file = "Centroid Clusterfgwc514m15.xlsx", row.names =
 # Menggabungkan hasil cluster algoritma FGWC-FPA dengan data
 library(xlsx)
 cluster.output <- cbind(data_kab_geoda_514 ,Res_fpa_fgwc$cluster)
-write.xlsx(cluster.output, file = "Final Clusterfpa514m15.xlsx", row.names = TRUE)
+write.xlsx(cluster.output, file = "FinalClusterfpa514m15_1.xlsx", row.names = TRUE)
 
 #Centroid FPA-FGWC
 cluster.output <- Res_fpa_fgwc$centroid
-write.xlsx(cluster.output, file = "Centroid Clusterfpa514m15.xlsx", row.names = TRUE)
+write.xlsx(cluster.output, file = "CentroidClusterfpa514m15_1.xlsx", row.names = TRUE)
 
